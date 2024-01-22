@@ -1,0 +1,251 @@
+/* inter variable */
+@font-face {
+    font-family: "Inter Variable";
+    src: url("type/InterVariable.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Variable";
+    src: url("type/InterVariable-Italic.ttf");
+    font-style: italic;
+}
+
+/* webpage */
+html, body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter Variable", system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+/* html, body {
+    overflow: hidden;
+} */
+
+/* global navbar */
+
+.globalnav {
+    width: 100%;
+    height: 96px;
+}
+
+.globalnav-content {
+    /* flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    /* layout */
+    width: 100%;
+    height: 100%;
+    padding: 24px 36px;
+}
+
+.globalnav-content .gn-content-left,
+.globalnav-content .gn-content-right {
+    /* flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 24px;
+
+    width: 480px;
+}
+
+.gn-content-left .starwolff-container {
+    /* flexbox */
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    /* layout */
+    height: 24px;
+    
+    /* interaction */
+    cursor: pointer;
+}
+
+.gn-content-left .starwolff-container .starwolff-wordmark {
+    height: 34px;
+}
+
+.starw, .lff {
+    width: 0;
+    height: 34px;
+    overflow: hidden;
+    transition: width 400ms cubic-bezier(0, .6, .3, 1);
+}
+
+.gn-content-left .starwolff-container .gn-logo-starwo {
+    /* flexbox */
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.gn-content-left .starwolff-container #gn-icon {
+    width: auto;
+    height: 24px;
+    margin-left: -1.85px;
+}
+
+.starwolff-container [id^="gn-logo"] {
+    display: none;
+}
+
+.starwolff-container:hover .starw {
+    width: 113px;
+}
+
+.starwolff-container:hover .lff {
+    width: 39px;
+}
+
+.starwolff-container:hover [id^="gn-logo"] {
+    display: block;
+}
+
+/* navlinks */
+
+.globalnav-content .globalnav-list {
+    /* flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.globalnav-list a {
+    color: unset;
+    text-decoration: none;
+    padding: 0 12px;
+}
+
+.globalnav-list .gn-item {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.96px;
+    color: rgba(61, 61, 66, 0.6);
+    transition: color 200ms ease-in-out, font-weight 400ms cubic-bezier(0, .6, .3, 1), letter-spacing 400ms cubic-bezier(0, .6, .3, 1);
+}
+
+.globalnav-list a:hover .gn-item {
+    color: #000000;
+    letter-spacing: 2px;
+}
+
+/* hire status (free / busy) */
+
+.hire-status-link {
+    color: unset;
+    text-decoration: none;
+}
+
+.hire-status {
+    /* flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    /* layout */
+    height: 48px;
+    padding: 16px 24px 16px 16px;
+
+    /* style */
+    border-radius: 24px;
+    background: #F2F2F7;
+}
+
+.hire-status span {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.96px;
+    color: #000000;
+    transition: letter-spacing 400ms cubic-bezier(0, .6, .3, 1);
+}
+
+.hire-status.status-busy {
+    background: transparent;
+    outline: 2px solid #F2F2F7;
+}
+
+.hire-status:hover span {
+    letter-spacing: 2px;
+}
+
+.hire-status.status-busy:hover span {
+    letter-spacing: -1.5px;
+}
+
+/* nav */
+
+.globalnav-content .gn-content-right {
+    justify-content: flex-end;
+}
+
+.globalnav-content .globalnav-socials {
+    /* flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.globalnav-socials a {
+    color: unset;
+    text-decoration: none;
+    padding: 0 12px;
+}
+
+.globalnav-socials .gn-social svg {
+    transition: all 400ms cubic-bezier(0, .6, .3, 1);
+}
+
+.globalnav-socials .gn-social svg path {
+    fill: rgba(61, 61, 66, 0.6);
+    transition: fill 200ms ease-in-out, transform 400ms cubic-bezier(0, .6, .3, 1);
+}
+
+.globalnav-socials a:hover .gn-social svg {
+    width: 36px;
+    height: 36px;
+}
+
+.globalnav-socials a:hover .gn-social svg path {
+    fill: #000000;
+}
+
+/* time */
+.time-wrapper {
+    /* flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.timezone-cst {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.96px;
+    color: rgba(61, 61, 66, 0.6);
+    transition: color 200ms ease-in-out, font-weight 400ms cubic-bezier(0, .6, .3, 1), letter-spacing 400ms cubic-bezier(0, .6, .3, 1);
+}
+
+.time-wrapper:hover svg path {
+    fill: #000000;
+}
+
+.time-wrapper:hover .timezone-cst {
+    color: #000000;
+    letter-spacing: 2px;
+}
