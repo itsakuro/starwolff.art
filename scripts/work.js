@@ -16,7 +16,7 @@ function getHireStatus() {
         }
     } else {
         hireStatusIcon.style.fill = "#FF2048";
-        hireStatus.innerHTML = "Currently not available for work";
+        hireStatus.innerHTML = "Currently at capacity";
         if (!hireStatusWrapper.classList.contains("status-busy")) {
             hireStatusWrapper.classList.add("status-busy")
         }

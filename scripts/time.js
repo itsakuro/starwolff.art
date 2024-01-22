@@ -4,8 +4,8 @@ const timeWrapper = document.getElementById("time-wrapper");
 let displayTime = true;
 
 function getCurrentTimeCST() {
-    const now = new Date();
-    now.toLocaleString('en-US', { timeZone: 'America/Chicago' });
+    const currentTimeCST = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
+    const now = new Date(currentTimeCST);
     
     const hours = now.getHours() % 12 || 12;
     const minutes = now.getMinutes();

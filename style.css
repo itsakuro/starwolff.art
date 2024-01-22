@@ -185,6 +185,31 @@ html, body, * {
     letter-spacing: -1.5px;
 }
 
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(100%);
+    }
+    45% {
+        opacity: 0.6;
+        transform: scale(90%);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(120%);
+    }
+    75% {
+        transform: scale(100%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+.hire-status svg {
+    animation: pulse 1500ms ease-in-out infinite;
+}
+
 /* nav */
 
 .globalnav-content .gn-content-right {
